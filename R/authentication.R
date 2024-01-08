@@ -68,6 +68,8 @@ get_token <- function(details, host) {
     httr2::req_method("POST") |>
     handle_irods_errors()
 
+  print(req)
+  print(str(req))
   # response
   httr2::req_perform(req) |>
     httr2::resp_body_string()
